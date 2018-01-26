@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			ul, li, h2, p, time {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			form {
+				width: 350px;
+				height: 200px;
+				position: relative;
+			}
+			
+			form textarea {
+				resize: none;
+				;
+				width: 300px;
+				height: 200px;
+				float: left;
+			}
+			
+			form input {
+				position: absolute;
+				float: left;
+				bottom: 0;
+				right: -60px;
+			}
+			
+			ul {
+				margin-top: 35px;
+			}
+			
+			ul > li {
+				overflow: hidden;
+				width: 500px;
+				height: 100px;
+				border: 1px solid #cecece;
+			}
+			
+			ul > li h2 {
+				width: 400px;
+				font-size: 15px;
+				font-weight: normal;
+				line-height: 37px;
+				color: #000;
+			}
+			
+			ul > li time {
+				display: block;
+				font-size: 14px;
+				line-height: 30px;
+				color: #000;
+			}
+			
+			ul > li button {
+				border: 0;
+				background: white;
+				display: inline-block;
+				font-size: 14px;
+				cursor: pointer;
+				color: #0000ee;
+				line-height: 37px;
+				text-decoration: underline;
+			}
+			
+			ul > li button:hover {
+				color: #000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<textarea id="txt" name="ly"></textarea>
+			<input id="btn" type="button" value="留言发送" />
+		</form>
+		<ul>
+			<!--<li>
+				<h2>第一次留言,好害怕！</h2>
+				<time>2017-04-12 17:40</time>
+				<p>删除</p>
+			</li>-->
+		</ul>
+
+		<script src="common功能加强版.js" type="text/javascript"></script>
+		<script src="jquery-1.11.3.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var otxt = document.getElementById("txt");
+			var obtn = document.getElementById("btn");
+			var oul = document.getElementsByTagName("ul")[0];
+
+			obtn.onclick = function() {
+				var tval = otxt.value;
+				if(tval.length == 0) {
+					alert("内容不能为空")
+				} else {
+					click();
+				}
+
+			}
+			window.onkeydown = function(e) {
+				var eve = e || event;
+				var tval = otxt.value;
+				if(eve.ctrlKey) {
+
+					if(eve.keyCode == 13) {
+						if(tval.length == 0) {
+							alert("内容不能为空")
+						} else {
+							click();
+						}
+					}
+				}
+				console.log(eve.keyCode);
+			}
+
+			function click() {
+				var tval = otxt.value;
+				var date1 = new Date();
+				//				console.log(tval,date1);
+				var year = date1.getFullYear();
+				var yue = date1.getMonth() + 1;
+				var ri = date1.getDate();
+				var shi = date1.getHours();
+				var fen = date1.getMinutes();
+				console.log(year, yue, ri, shi, fen)
+				var oli = document.createElement("li");
+				var str = `<h2>${tval}</h2><time>${year}-${yue}-${ri} ${shi}:${fen}</time><button>删除</button>`
+				oli.innerHTML = str;
+				oul.insertBefore(oli, oul.children[0]);
+				otxt.value = "";
+				aaa();
+			}
+
+			function aaa() {
+				var arrbtn = document.getElementsByTagName("button");
+				var arrli = document.getElementsByTagName("li");
+				console.log(arrbtn, arrli);
+				for(let i = 0; i < arrbtn.length; i++) {
+					arrbtn[i].onclick = function() {
+						console.log(i);
+						console.log(this.parentElement)
+						oUl.removeChild(this.parentElement);
+					}
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

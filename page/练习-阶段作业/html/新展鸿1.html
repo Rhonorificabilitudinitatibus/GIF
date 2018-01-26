@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			 @font-face {font-family: "iconfont";
+          src: url('../font/iconfont.eot'); /* IE9*/
+          src: url('../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+          url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+          url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+			body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+			ul,li,ol{list-style:none;}
+			img,fieldset{border:0; }
+			img{display:block;}
+			a{text-decoration:none; color:#333;}
+			h1,h2,h3,h4,h5,h6{font-weight:100;}
+			body{ font-family:"微软雅黑";}
+			input,a{outline:none;}
+			body{width: 100%;height: 100%;}
+			
+			#header-wrap{height: 45px;width: 100%;background: #004b50;}
+			header{height: 45px;width: 1016px;display: flex;margin: auto;justify-content: center;}
+			header .search p{font-size: 11px;color: #FFFFFF;line-height: 45px;}
+			header .search a{font-size: 11px;color: #FFFFFF;line-height: 45px;}
+			header .h-center form input{height: 28px;width: 200px;border: solid 1px #CCCCCC;border-radius:15px;margin-left: 410px;color: #CCCCCC;}
+			header .h-center form span{display: block ;height: 28px;width: 28px;border-radius:15px;margin-left: -30px;}
+			header .h-center form{display: flex;height: 45px;align-items: center;}
+			header .h-center{padding-right: 22px;}
+			header .h-center form .iconfont a{font-size: 17px;color: #CCCCCC;line-height: 28px;}
+			header .h-right{line-height: 45px;}
+			header .h-right form input{width: 61px;height: 29px;
+			background: #ccdadb url(../img/tu17.jpg) no-repeat 5px 10px;padding-left: 44px;}
+			#logo-part-wrap{height: 95px;width: 100%;background: #007177;}
+			.logo-part{height: 95px;width: 1016px;margin: auto;display: flex;align-items: center;}
+			.logo-part>img{height: 65px;width: 245px;padding-right: 19px;}
+			.logo-part .logo-part-right img{height: 33px;width: 30px;}
+			.logo-part .logo-part-left{height: 35px;width: 184px;font-size: 12px;color: #cadddb;border-left: solid 1px #cadddb;padding-left: 10px;}
+			.logo-part .logo-part-right{display: flex;font-size: 15px;color: #eebb84;align-items: center;padding-left: 130px;}
+			#nav-wrap{height: 50px;width: 100%;}
+			nav{height:50px;width: 1016px;margin: auto;}
+			nav ul{height:50px;display: flex;padding-left: 85px;}
+			nav ul li:hover{background: #016f79;}
+			nav ul li a{line-height: 50px;border-right: dashed 1px #000000;padding: 0 20px;}
+			#banner{height: 450px;width: 100%;}
+			#banner img{height: 450px;width: 100%;}
+			#product-wrap{width: 100%;height: 346px;position: relative;}
+			.product{width: 960px;height: 346px;background: #FFFFFF;margin: auto;border-bottom: solid 7px #d6efeb;}
+			.product h1{color: #fd6a0b;font-size: 26px;border-bottom: solid 1px #d2d2d2;height: 92px;line-height: 92px;text-align: center;}
+			.product span{display: block;width: 134px;height: 28px;background: #FFFFFF;margin: auto;position: absolute;top: 77px;left: 645px;font-size: 14px;color: #a9a9a9;border: solid 1px #d2d2d2;text-align: center;line-height: 28px;}
+			.product .left{width: 599px;height: 346;margin-top: 50px;display: flex;float: left;}
+			.product .left .left-1{width: 51px;height: 135;font-size: 12px;color: #666666;padding: 0 34px;}
+
+			.product .left .left-1 ul li{line-height: 45px;}
+			.product .right{float: left;margin-top: 50px;}
+			#advantage-wrap{width: 100%;height: 716px;}
+			.advantage{width: 960px;height: 716px;background: #FFF;margin: auto;}
+			.advantage .advantage-1{width: 960px;height: 172px;display: flex;justify-content: center;align-items: center;}
+			.advantage .advantage-1 img{width: 85px;height: 125px;padding-top: 20px;}
+			.advantage .advantage-1>div{padding-top: 61px;text-align: center;color: #007177;}
+			.advantage .advantage-1>div span{color: #ff7701;}
+			.advantage .advantage-1>div h3{color: #aaa;}
+			.advantage .advantage-2 .zzz .zuo{width: 412px;height: 108px;background: #f2fdff;margin-top: 37px;border: dashed 1px #21a7b3;border-radius: 7px;}
+			.advantage .advantage-2 h3{font-size: 17;color: #22a7ae;font-weight: bold;margin-top: 14px;margin-bottom: 13px;}
+			.advantage .advantage-2 p{font-size: 12px;color: #969a99;line-height: 23px;}
+			.advantage .advantange-2{display: flex;justify-content: space-between;}
+			.sevenbox{width: 100%;}
+			.seven{width: 960px;background: #FFFFFF;margin: auto;}
+			.seven img{margin: auto;}
+			.eightbox{width: 100%;height: 92px;position: relative;}
+			.eight{width: 960px;height: 92px;margin: auto;}
+			.eightbox .eight h1{color: #fd6a0b;font-size: 26px;border-bottom: solid 1px #d2d2d2;height: 92px;line-height: 92px;text-align: center;}
+			.eightbox .eight span{display: block;width: 134px;height: 28px;background: #FFFFFF;margin: auto;position: absolute;top: 78px;left: 647px;font-size: 14px;color: #a9a9a9;border: solid 1px #d2d2d2;text-align: center;line-height: 28px;}
+			.nanebox{width: 100%;height: 613px;}
+			.nane{width: 960px;height: 613px;margin: auto;margin-top: 16px;display: flex;flex-wrap: wrap;}
+			.nanebox .nane .nane-1{width: 441px;height: 165px;display: flex;padding-right: 15px;}
+			.nanebox .nane .nane-1 img{padding-left: 9px;padding-top: 24px;padding-right: 21px;}
+			.nanebox .nane .nane-1 p{font-size: 12px;line-height: 26px;padding-top: 33px;}
+			.tenbox{width: 100%;height: 1240px;}
+			.ten{width: 960px;height: 1204px;background: #FFFFFF;margin: auto;}
+			.ten .ten-1{width: 960px;height: 70px;display: flex;align-items: center;justify-content: space-around;}
+			.ten .ten-1 span:first-child{display: block;width: 250px;height: 1px;background: #056d78;box-shadow: 2px 2px 5px #000;}
+			.ten .ten-1 span:last-child{display: block;width: 230px;height: 1px;background: #056d78;}
+			.ten .ten-1 p{color: #056d78;font-size: 32px;}
+			.ten .ten-2{width: 960px;height: 303px;display: flex;}
+			.ten .ten-2 .ten-2-l{width: 557px;height: 230px;padding-left: 46px;padding-top: 109px;}
+			.ten .ten-2 .ten-2-l .top h1{ width: 71px;height: 71px;background: #007177;border-radius: 50%;color: #FFFFFF;font-size: 35px;text-align: center;line-height: 71px;margin-right: 12px;}
+			.ten .ten-2 .ten-2-l .top h2{font-size: 34px;color: #fd7704;}
+			.ten .ten-2 .ten-2-l .top{display: flex;align-items: center;}
+			.ten .ten-2 .ten-2-l p{font-size: 13px;color: #666;line-height: 34px;}
+			.ten .ten-3{ height: 36px;margin-top: 55px;}
+			.elevenbox{width: 100%;height: 120px;}
+			.eleven{width: 960px;height: 120px;background:#FFFFFF;margin: auto;}
+			.eleven img{margin: auto;}
+			.twelvebox{width: 100%;height: 276px;}
+			.twelve{width: 960px;height: 276px;margin: auto;margin-top: 14px;display: flex;}
+			.twelve .twelve-l{padding: 22px 47px 33px 16px;}
+			.twelve .twelve-r{}
+			.twelve .twelve-r h3{font-size: 19px;color: #0b888e;line-height: 39px;padding-top: 26px;}
+			.twelve .twelve-r p{font-size: 11px;color: #666;line-height: 24px;}
+			.thirteenbox{width: 100%;height: 247px;}		
+			.thirteen{width: 960px;height: 247px;margin: auto;display: flex;align-items: center;padding: 0 10px;}		
+			.thirteen .xbox{height:230px;width: 295px;background: #Fff;margin: 0 12px;}
+			.thirteen .xbox .thirteen-t{display: flex;width: 295px;height: 42px;border-bottom: solid 1px #999;align-items: center;justify-content: space-between;}				
+			.thirteen .xbox .thirteen-t h1{font-size: 18px;color: #ff3d07;padding-left: 10px;}		
+			.thirteen .xbox .thirteen-t span{padding-right: 11px;}	
+			.thirteen .xbox .thirteen-b{padding-bottom: 12px;}				
+			.thirteen .xbox .thirteen-b p:last-child{border:none;}				
+			.thirteen .xbox .thirteen-b p{font-size: 11px;height: 36px;width: 285px;border-bottom: dashed 1px #999;color: #333333;line-height: 36px;padding-left: 11px;}				
+			.fourteenbox{width: 100%;height: 16px;padding-top: 50px;}	
+			.fourteenbox .fourteen h5{width: 100%;height: 1px;background: #FFFFFF;}	
+			.fourteenbox .fourteen h6{width: 100%;height: 2px;background: #fe6a0a;margin-top: 14px;}
+			.fourteenbox{width: 100%;height: 16px;padding-top: 50px;}	
+			.fiveteenbox{width: 100%;height: 50px;background: #373737;}
+			.fiveteen{width: 960px;height: 50px;margin: auto;display: flex;justify-content: space-between;align-items: center;font-size: 12px;color: #dbdbdb;}
+			.fiveteen a{font-size: 12px;color: #dbdbdb;}
+			footer{widows: 100%;height: 164px;background: #2f2f2f;font-size: 12px;color: #b5b5b5;}
+			footer .sixteen{width: 960px;height: 164px;margin: auto;line-height: 24px;padding-top: 11px;}
+			footer .sixteen .qqq{display: flex;}
+			footer .sixteen .qqq span{padding-right: 472px;}
+			footer .sixteen p:nth-child(5){color: #888;padding-top: 26px;}
+				
+		</style>
+	</head>
+	<body>
+		<div id="header-wrap">
+			<header>
+				<div class="search">
+					<p>热门搜索：<a href="">执手锁</a> | <a href="">门窗配件</a> | <a href="">花城</a> | <a href="">滑轮</a> | <a href="">玻璃胶</a></p>
+				</div>
+				<div class="h-center">
+					<form action="">
+						<input type="text" value="搜索产品" />
+						<span class="iconfont"><a href="">&#xe621;</a></span>
+					</form>
+				</div>
+				<div class="h-right">
+					<form action="">
+						<input type="text" value="" list="xxx"/>
+						<datalist id="xxx">
+							<option>中文</option>
+							<option>英语</option>
+							<option>日语</option>
+						</datalist>
+					</form>
+				</div>
+			</header>
+		</div>
+		<div id="logo-part-wrap">
+			<div class="logo-part">
+				<img src="../img/tu18.jpg"/>
+				<div class="logo-part-left">
+					<p>二十年　五金生产经验</p>
+					<p>二十年　五金生产经验</p>
+				</div>
+				<div class="logo-part-right">
+					<img src="../img/tu19.jpg"/>
+					<i>热线电话：86-317464664-00019238</i>
+				</div>
+			</div>
+		</div>
+		<div id="nav-wrap">
+			<nav>
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">首页首页</a></li>
+					<li><a href="">首页首页首页</a></li>
+					<li><a href="">首页首页</a></li>
+					<li><a href="">首页首</a></li>
+					<li><a href="">首页首页</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="banner">
+			<img src="../img/banner5.jpg"/>
+		</div>
+		<div id="product-wrap">
+			<div class="product">
+				<h1>新鸿展产品</h1>
+				<span>PRODUCT</span>
+				<div class="left">
+					<div class="left-1">
+						<ul>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+						</ul>
+					</div>
+					<div class="left-1">
+						<ul>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+						</ul>
+					</div>
+					<div class="left-1">
+						<ul>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+						</ul>
+					</div>
+					<div class="left-1">
+						<ul>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+						</ul>
+					</div>
+					<div class="left-1">
+						<ul>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+							<li><a href="">门窗系统</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right"><img src="../img/tu20.jpg"/></div>
+			</div>		
+		</div>
+		<div id="advantage-wrap">
+			<div class="advantage">
+				<div class="advantage-1">
+					<div>
+						<h1>新鸿展如何做到<span>高质价优</span></h1>
+						<h3>HIGH QUALITY AND EXCELLENT PRICE</h3>
+					</div>	
+					<img src="../img/tu21.jpg"/>
+				</div>
+				<div class="advantage-2">
+					<div class="zzz">
+						<div class="zuo">
+							<h3>生产销售一条龙，成本根本没优势</h3>
+							<p>生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，根据顾客，不断创新，不断进步。</p>
+						</div>
+						<div class="zuo">
+							<h3>生产销售一条龙，成本根本没优势</h3>
+							<p>生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，根据顾客，不断创新，不断进步。</p>
+						</div>
+						<div class="zuo">
+							<h3>生产销售一条龙，成本根本没优势</h3>
+							<p>生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，根据顾客，不断创新，不断进步。</p>
+						</div>
+					</div>	
+					<div class="you">
+						<img src="../img/tu22.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sevenbox">
+			<div class="seven"><img src="../img/tu23.jpg"/></div>	
+		</div>
+		<div class="eightbox">
+			<div class="eight">
+				<h1>新鸿展产品</h1>
+				<span>PRO DUCT</span>
+			</div>
+		</div>
+		<div class="nanebox">
+			<div class="nane">
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+				<div class="nane-1">
+					<img src="../img/tu24.jpg"/>
+					<p>生产一条龙，成本没优势。<br />专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，专业吹牛二十年，吹牛我们是认真的，，不断创新，不断进步。</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="tenbox">
+			<div class="ten">
+				<div class="ten-1">
+					<span></span>
+					<p>客户选择新鸿展的</p>
+					<img src="../img/tu25.jpg" alt="" />
+					<p>大理由</p>
+					<span></span>
+				</div>
+				<div class="ten-2">
+					<div class="ten-2-l">
+						<div class="top">
+							<h1>01</h1>
+							<h2>丰富的生产经验</h2>
+						</div>	
+						<p>专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，</p>
+					</div>
+					<div class="ten-2-r">
+						<img src="../img/tu26.jpg"/>
+					</div>
+					
+				</div>
+				<div class="ten-3">
+					<img src="../img/tu27.jpg"/>
+					
+				</div><div class="ten-2">
+					<div class="ten-2-l">
+						<div class="top">
+							<h1>01</h1>
+							<h2>丰富的生产经验</h2>
+						</div>	
+						<p>专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，</p>
+					</div>
+					<div class="ten-2-r">
+						<img src="../img/tu26.jpg"/>
+					</div>
+					
+				</div>
+				<div class="ten-3">
+					<img src="../img/tu27.jpg"/>
+					
+				</div>
+				<div class="ten-2">
+					<div class="ten-2-l">
+						<div class="top">
+							<h1>01</h1>
+							<h2>丰富的生产经验</h2>
+						</div>	
+						<p>专业吹牛二十年，吹牛我们是认真的生产销售一条龙，成本根本没优势，</p>
+					</div>
+					<div class="ten-2-r">
+						<img src="../img/tu26.jpg"/>
+					</div>
+					
+				</div>
+				<div class="ten-3">
+					<img src="../img/tu27.jpg"/>
+					
+				</div>
+				
+			</div>
+		</div>
+		<div class="elevenbox">
+			<div class="eleven">
+				<img src="../img/tu23.jpg"/>
+			</div>
+		</div>
+		<div class="eightbox">
+			<div class="eight">
+				<h1>新鸿展产品</h1>
+				<span>PRO DUCT</span>
+			</div>
+		</div>
+		<div class="twelvebox">
+			<div class="twelve">
+				<div class="twelve-l">
+					<img src="../img/tu28.jpg"/>
+				</div>	
+				<div class="twelve-r">
+					<h3>丰富的生产经验</h3>
+					<p>丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验丰富的生产经验</p>
+				</div>
+			</div>
+				
+		</div>
+		<div class="thirteenbox">
+			<div class="thirteen">
+				<div class="xbox">
+					<div class="thirteen-t">
+						<h1>新鸿展动态</h1>
+						<span><img src="../img/tu29.jpg"/></span>
+					</div>
+					<div class="thirteen-b">
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+					</div>
+				</div>
+				<div class="xbox">
+					<div class="thirteen-t">
+						<h1>新鸿展动态</h1>
+						<span><img src="../img/tu29.jpg"/></span>
+					</div>
+					<div class="thirteen-b">
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+					</div>
+				</div>
+				<div class="xbox">
+					<div class="thirteen-t">
+						<h1>新鸿展动态</h1>
+						<span><img src="../img/tu29.jpg"/></span>
+					</div>
+					<div class="thirteen-b">
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+						<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="fourteenbox">
+			<div class="fourteen">
+				<h5></h5>
+				<h6></h6>
+			</div>
+		</div>
+		<div class="fiveteenbox">
+			<div class="fiveteen">
+				<p><a href="">首页</a> | <a href="">新展鸿产品</a> | <a href="">购物车</a>   <a href="">企业介绍</a>   <a href="">联系方式</a></p>
+				<p><a href="">首页</a> | <a href="">新展鸿产品</a> | <a href="">购物车</a>   <a href="">企业介绍</a>   <a href="">联系方式</a></p>	
+			</div>
+		</div>
+		<footer>
+			<div class="sixteen">
+				<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+				<p>吹牛电话：+0131-38459213-200009</p>
+				<p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+				<div class="qqq">
+					<span>企业邮箱：@987565919.qq.com</span><p>专业吹牛二十年，吹牛我们是认真的,生产销售一条龙</p>
+				</div>
+				<p>豫ICP备注1112344号</p>
+			</div>
+		</footer>
+		
+			
+
+		
+		
+		
+	</body>
+	
+</html>
